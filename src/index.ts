@@ -1,17 +1,12 @@
 import express from 'express'
 import cors from 'cors'
+import fake_user from './routes/fake_user'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/fake-user', (_req, res) => {
-  res.json({
-    name: 'John Doe',
-    age: 30,
-    occupation: 'Software Engineer'
-  })
-})
+app.use('/api/fakeUser', fake_user)
 
 const PORT = 3000
 app.listen(PORT, () => {
