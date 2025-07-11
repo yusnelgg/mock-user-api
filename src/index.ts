@@ -5,7 +5,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/persona', (_req, res) => {
+app.use('/api/fake-user', (_req, res) => {
   res.json({
     name: 'John Doe',
     age: 30,
